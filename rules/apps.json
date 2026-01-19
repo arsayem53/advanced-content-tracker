@@ -1,0 +1,113 @@
+{
+    "_description": "Custom application classification rules",
+    "_version": "1.0.0",
+    
+    "custom_apps": {
+        "my-custom-ide": {
+            "category": "coding",
+            "activity": "productive",
+            "name": "My Custom IDE"
+        }
+    },
+    
+    "productive_apps": [
+        "code",
+        "sublime_text",
+        "vim",
+        "emacs",
+        "pycharm",
+        "intellij",
+        "webstorm",
+        "android-studio",
+        "eclipse",
+        "netbeans",
+        "atom",
+        "brackets",
+        "gedit",
+        "kate",
+        "notepadqq",
+        "libreoffice",
+        "onlyoffice",
+        "gimp",
+        "inkscape",
+        "blender",
+        "kdenlive",
+        "audacity",
+        "obs",
+        "thunderbird",
+        "evolution",
+        "notion",
+        "obsidian",
+        "joplin",
+        "zettlr"
+    ],
+    
+    "entertainment_apps": [
+        "vlc",
+        "mpv",
+        "totem",
+        "celluloid",
+        "kodi",
+        "spotify",
+        "rhythmbox",
+        "clementine",
+        "steam",
+        "lutris",
+        "retroarch",
+        "discord"
+    ],
+    
+    "browser_apps": [
+        "firefox",
+        "chrome",
+        "chromium",
+        "brave",
+        "opera",
+        "vivaldi",
+        "edge",
+        "epiphany",
+        "midori",
+        "qutebrowser",
+        "librewolf",
+        "waterfox",
+        "tor-browser"
+    ],
+    
+    "communication_apps": [
+        "slack",
+        "discord",
+        "telegram",
+        "signal",
+        "element",
+        "teams",
+        "zoom",
+        "skype",
+        "thunderbird",
+        "evolution",
+        "geary"
+    ],
+    
+    "system_apps": [
+        "nautilus",
+        "dolphin",
+        "thunar",
+        "pcmanfm",
+        "nemo",
+        "gnome-terminal",
+        "konsole",
+        "alacritty",
+        "kitty",
+        "tilix",
+        "gnome-control-center",
+        "systemsettings"
+    ],
+    
+    "excluded_apps": [
+        "keepassxc",
+        "bitwarden",
+        "1password",
+        "gnome-keyring",
+        "seahorse",
+        "secret-tool"
+    ]
+}

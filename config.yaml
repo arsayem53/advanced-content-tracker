@@ -1,0 +1,314 @@
+# ================================================
+# Advanced Content Tracker - Configuration
+# ================================================
+# This is the main configuration file for the content tracker.
+# Customize settings below to adjust tracking behavior.
+
+# General settings
+general:
+  app_name: "Advanced Content Tracker"
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# Monitoring settings
+monitoring:
+  # Screenshot interval in seconds
+  screenshot_interval: 30
+  
+  # Recheck same window after N seconds (avoid duplicate analysis)
+  same_window_recheck: 30
+  
+  # Consider user idle after N seconds of no activity
+  idle_threshold: 300
+  
+  # Save screenshots to disk (privacy concern - disable by default)
+  save_screenshots: false
+  
+  # Maximum screenshots to keep (if save_screenshots is true)
+  max_screenshots: 1000
+  
+  # Screenshot quality (1-100, PNG compression)
+  screenshot_quality: 85
+  
+  # Monitor specific displays (empty = all monitors)
+  # Use monitor index: [0, 1] for first two monitors
+  monitors: []
+
+# Detection settings
+detection:
+  # Enable/disable detection methods
+  use_clip: true           # CLIP model for image classification
+  use_nudenet: true        # NudeNet for NSFW detection
+  use_ocr: true            # Tesseract OCR for text extraction
+  use_url_analysis: true   # URL pattern matching
+  use_rules: true          # Rule-based classification
+  use_image_analysis: true # Basic image analysis (colors, layout)
+  
+  # Confidence thresholds (0.0 - 1.0)
+  min_confidence: 0.6      # Minimum confidence to accept classification
+  high_confidence: 0.85    # Threshold for high-confidence classifications
+  
+  # CLIP settings
+  clip_model: "ViT-B-32"   # Options: ViT-B-32, ViT-B-16, ViT-L-14
+  clip_pretrained: "openai"
+  
+  # OCR settings
+  ocr_language: "eng"      # Tesseract language code (eng, deu, fra, etc.)
+  ocr_timeout: 5           # OCR timeout in seconds
+  
+  # Skip analysis if window hasn't changed
+  skip_unchanged: true
+  
+  # Minimum text length to trigger text analysis
+  min_text_length: 10
+
+# Performance settings
+performance:
+  # Use GPU if available (requires CUDA)
+  enable_gpu: false
+  
+  # Maximum memory for ML models (MB)
+  max_memory_mb: 2048
+  
+  # Keep models loaded in memory (faster but uses more RAM)
+  cache_models: true
+  
+  # Number of worker threads for analysis
+  worker_threads: 2
+  
+  # Batch processing size for ML models
+  batch_size: 1
+  
+  # Analysis timeout in seconds
+  analysis_timeout: 30
+
+# Content categories - Keywords used for classification
+content_categories:
+  productive:
+    - "coding"
+    - "programming"
+    - "reading_documentation"
+    - "professional_networking"
+    - "learning"
+    - "writing"
+    - "spreadsheet"
+    - "presentation"
+    - "email_work"
+    - "research"
+    - "design_work"
+  
+  educational:
+    - "tutorial"
+    - "course"
+    - "documentation"
+    - "technical_article"
+    - "lecture"
+    - "how_to"
+    - "learning_video"
+    - "academic"
+  
+  entertainment:
+    - "watching_movie"
+    - "watching_series"
+    - "music_video"
+    - "gaming_entertainment"
+    - "comedy"
+    - "vlog"
+    - "entertainment_video"
+    - "streaming"
+  
+  social_media:
+    - "facebook_feed"
+    - "twitter_feed"
+    - "instagram_feed"
+    - "reddit_browsing"
+    - "social_messaging"
+    - "linkedin_feed"
+    - "tiktok"
+  
+  gaming:
+    - "playing_game"
+    - "watching_gaming"
+    - "game_streaming"
+    - "esports"
+  
+  shopping:
+    - "online_shopping"
+    - "product_browsing"
+    - "price_comparison"
+  
+  news:
+    - "reading_news"
+    - "news_video"
+    - "current_events"
+  
+  adult:
+    - "nsfw_content"
+    - "adult_website"
+    - "explicit_content"
+
+# Notifications settings
+notifications:
+  # Enable desktop notifications
+  enabled: true
+  
+  # Notification types
+  distraction_alerts: true
+  productivity_updates: true
+  daily_summary: true
+  nsfw_alerts: true
+  
+  # Distraction threshold (seconds) - notify after this much entertainment
+  distraction_threshold: 1800  # 30 minutes
+  
+  # Productivity update interval (seconds)
+  productivity_update_interval: 3600  # 1 hour
+  
+  # Daily summary time (24h format)
+  daily_summary_time: "21:00"
+  
+  # Quiet hours (no notifications)
+  quiet_hours:
+    enabled: false
+    start: "22:00"
+    end: "08:00"
+
+# Privacy settings
+privacy:
+  # Don't save screenshots to disk
+  store_screenshots: false
+  
+  # Don't log detailed NSFW information
+  store_nsfw_details: false
+  
+  # Hash URLs before storing (anonymization)
+  anonymize_urls: false
+  
+  # Exclude certain apps from tracking (case-insensitive partial match)
+  excluded_apps:
+    - "keepassxc"
+    - "bitwarden"
+    - "1password"
+    - "gnome-keyring"
+    - "seahorse"
+    - "secret-tool"
+    - "ssh-agent"
+    - "gpg-agent"
+  
+  # Exclude windows with titles containing these keywords (case-insensitive)
+  excluded_title_keywords:
+    - "password"
+    - "private"
+    - "incognito"
+    - "secret"
+    - "credential"
+    - "keyring"
+    - "wallet"
+  
+  # Auto-delete data older than N days (0 = never delete)
+  data_retention_days: 90
+
+# Database settings
+database:
+  # Database file path (relative to project root)
+  path: "data/activity.db"
+  
+  # Enable WAL mode for better concurrency
+  wal_mode: true
+  
+  # Auto vacuum database periodically
+  auto_vacuum: true
+  
+  # Backup interval in days (0 = disabled)
+  backup_interval: 7
+  
+  # Maximum database size in MB (0 = unlimited)
+  max_size_mb: 0
+
+# Reports settings
+reports:
+  # Default report format
+  default_format: "json"  # json, csv, html
+  
+  # Report output directory
+  output_dir: "data/reports"
+  
+  # Include in reports
+  include_screenshots: false
+  include_urls: true
+  include_window_titles: true
+  
+  # Auto-generate daily reports
+  auto_daily_report: false
+
+# UI settings (for future GUI implementation)
+ui:
+  # System tray icon
+  show_tray_icon: true
+  
+  # Start minimized to tray
+  start_minimized: true
+  
+  # Theme
+  theme: "system"  # system, light, dark
+
+# Productivity scoring weights
+# Positive values = productive, Negative values = distracting
+scoring:
+  weights:
+    productive: 1.0
+    educational: 0.8
+    neutral: 0.0
+    news: -0.1
+    shopping: -0.2
+    entertainment: -0.3
+    social_media: -0.4
+    gaming: -0.3
+    adult: -1.0
+  
+  # Daily productivity goal (percentage)
+  daily_goal: 60
+
+# Focus mode settings
+focus_mode:
+  # Enable focus mode functionality
+  enabled: false
+  
+  # Block/alert on these categories during focus mode
+  blocked_categories:
+    - "entertainment"
+    - "social_media"
+    - "gaming"
+    - "adult"
+    - "shopping"
+  
+  # Default focus session duration (minutes)
+  default_duration: 25  # Pomodoro style
+  
+  # Break duration (minutes)
+  break_duration: 5
+  
+  # Long break duration after N sessions
+  long_break_duration: 15
+  sessions_before_long_break: 4
+  
+  # Play sound on session end
+  play_sound: true
+
+# Advanced settings - Usually don't need to modify
+advanced:
+  # Minimum time between identical window captures (ms)
+  dedup_interval_ms: 1000
+  
+  # Maximum queue size for analysis
+  max_queue_size: 100
+  
+  # Enable debug screenshots (save problematic screenshots)
+  debug_screenshots: false
+  
+  # Log all detections (verbose)
+  log_all_detections: false
+  
+  # Enable experimental features
+  experimental_features: false

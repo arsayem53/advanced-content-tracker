@@ -1,0 +1,164 @@
+{
+    "_description": "Custom website classification rules",
+    "_version": "1.0.0",
+    
+    "custom_sites": {
+        "mycompany.com": {
+            "category": "work",
+            "activity": "productive",
+            "name": "My Company"
+        },
+        "internal.mycompany.com": {
+            "category": "work",
+            "activity": "productive",
+            "name": "Internal Tools"
+        }
+    },
+    
+    "productive_domains": [
+        "github.com",
+        "gitlab.com",
+        "bitbucket.org",
+        "stackoverflow.com",
+        "stackexchange.com",
+        "developer.mozilla.org",
+        "docs.python.org",
+        "docs.microsoft.com",
+        "learn.microsoft.com",
+        "cloud.google.com",
+        "aws.amazon.com",
+        "azure.microsoft.com",
+        "digitalocean.com",
+        "heroku.com",
+        "vercel.com",
+        "netlify.com",
+        "figma.com",
+        "notion.so",
+        "trello.com",
+        "asana.com",
+        "monday.com",
+        "jira.atlassian.com",
+        "confluence.atlassian.com",
+        "slack.com",
+        "linear.app",
+        "airtable.com"
+    ],
+    
+    "educational_domains": [
+        "udemy.com",
+        "coursera.org",
+        "edx.org",
+        "khanacademy.org",
+        "pluralsight.com",
+        "skillshare.com",
+        "linkedin.com/learning",
+        "codecademy.com",
+        "freecodecamp.org",
+        "leetcode.com",
+        "hackerrank.com",
+        "codewars.com",
+        "exercism.org",
+        "brilliant.org",
+        "duolingo.com",
+        "mit.edu",
+        "stanford.edu",
+        "harvard.edu",
+        "ocw.mit.edu"
+    ],
+    
+    "entertainment_domains": [
+        "youtube.com",
+        "netflix.com",
+        "primevideo.com",
+        "disneyplus.com",
+        "hulu.com",
+        "hbomax.com",
+        "twitch.tv",
+        "crunchyroll.com",
+        "spotify.com",
+        "soundcloud.com",
+        "vimeo.com",
+        "dailymotion.com",
+        "9gag.com",
+        "imgur.com",
+        "giphy.com"
+    ],
+    
+    "social_media_domains": [
+        "facebook.com",
+        "instagram.com",
+        "twitter.com",
+        "x.com",
+        "tiktok.com",
+        "snapchat.com",
+        "pinterest.com",
+        "tumblr.com",
+        "reddit.com",
+        "linkedin.com",
+        "discord.com",
+        "telegram.org",
+        "whatsapp.com"
+    ],
+    
+    "shopping_domains": [
+        "amazon.com",
+        "amazon.co.uk",
+        "amazon.de",
+        "amazon.in",
+        "ebay.com",
+        "aliexpress.com",
+        "walmart.com",
+        "target.com",
+        "bestbuy.com",
+        "newegg.com",
+        "etsy.com",
+        "shopify.com",
+        "wish.com",
+        "alibaba.com"
+    ],
+    
+    "news_domains": [
+        "bbc.com",
+        "cnn.com",
+        "nytimes.com",
+        "theguardian.com",
+        "reuters.com",
+        "apnews.com",
+        "washingtonpost.com",
+        "wsj.com",
+        "bloomberg.com",
+        "techcrunch.com",
+        "theverge.com",
+        "arstechnica.com",
+        "wired.com",
+        "engadget.com",
+        "gizmodo.com",
+        "slashdot.org",
+        "news.ycombinator.com"
+    ],
+    
+    "blocked_domains": [],
+    
+    "nsfw_domains": [
+        "pornhub.com",
+        "xvideos.com",
+        "xnxx.com",
+        "xhamster.com",
+        "redtube.com",
+        "youporn.com",
+        "spankbang.com",
+        "rule34.xxx"
+    ],
+    
+    "nsfw_keywords": [
+        "porn",
+        "xxx",
+        "adult",
+        "nsfw",
+        "18+",
+        "erotic",
+        "nude",
+        "naked",
+        "hentai"
+    ]
+}

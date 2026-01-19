@@ -1,0 +1,75 @@
+# ================================================
+# Advanced Content Tracker - Dependencies
+# ================================================
+
+# Core utilities
+psutil>=5.9.0
+pyyaml>=6.0.1
+
+# Linux window management
+python-xlib>=0.33
+
+# Screenshot capture
+mss>=9.0.1
+Pillow>=10.0.0
+
+# OCR - Text extraction
+pytesseract>=0.3.10
+
+# Machine Learning - PyTorch
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Transformers for CLIP
+transformers>=4.35.0
+ftfy>=6.1.1
+regex>=2023.0.0
+
+# CLIP model
+open-clip-torch>=2.23.0
+
+# NSFW Detection
+nudenet>=3.4.2
+
+# Image processing
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+scikit-image>=0.21.0
+
+# Database (SQLite is built-in, but we need this for better handling)
+# sqlite3 is part of Python standard library
+
+# HTTP requests (for URL analysis)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+urllib3>=2.0.0
+
+# Desktop notifications
+py-notifier>=0.5.0
+notify-py>=0.3.42
+
+# DBus for Linux notifications (alternative)
+#dbus-python>=1.3.2; sys_platform == 'linux'
+
+# Scheduling
+schedule>=1.2.0
+
+# Date/time handling
+python-dateutil>=2.8.2
+
+# Progress bars (for downloads and processing)
+tqdm>=4.66.0
+
+# Logging enhancements
+colorlog>=6.7.0
+
+# Optional: For better terminal output
+rich>=13.5.0
+
+# Optional: For system tray icon
+# pystray>=0.19.0
+
+# Development/Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0

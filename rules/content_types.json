@@ -1,0 +1,184 @@
+{
+    "_description": "Content type classification keywords and patterns",
+    "_version": "1.0.0",
+    
+    "video_types": {
+        "tutorial": {
+            "keywords": ["tutorial", "how to", "learn", "guide", "course", "lesson", "explained", "for beginners", "step by step"],
+            "weight": 1.5,
+            "activity": "educational"
+        },
+        "music_video": {
+            "keywords": ["official video", "music video", "mv", "official mv", "lyrics", "official audio", "vevo"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "gaming": {
+            "keywords": ["gameplay", "playthrough", "let's play", "walkthrough", "speedrun", "gaming", "gamer", "twitch"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "anime": {
+            "keywords": ["anime", "manga", "subbed", "dubbed", "crunchyroll", "episode", "ep"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "cartoon": {
+            "keywords": ["cartoon", "animation", "animated", "disney", "pixar"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "documentary": {
+            "keywords": ["documentary", "nature", "history", "biography", "national geographic", "discovery"],
+            "weight": 1.2,
+            "activity": "educational"
+        },
+        "movie": {
+            "keywords": ["full movie", "film", "movie", "cinema"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "series": {
+            "keywords": ["season", "episode", "s0", "e0", "series", "show"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "podcast": {
+            "keywords": ["podcast", "interview", "talk show", "discussion"],
+            "weight": 1.0,
+            "activity": "neutral"
+        },
+        "news": {
+            "keywords": ["news", "breaking", "live news", "report", "headline"],
+            "weight": 1.0,
+            "activity": "news"
+        },
+        "comedy": {
+            "keywords": ["comedy", "stand up", "standup", "funny", "comedian"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "vlog": {
+            "keywords": ["vlog", "daily vlog", "day in my life", "routine"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "live_stream": {
+            "keywords": ["live", "streaming", "stream", "live now"],
+            "weight": 1.0,
+            "activity": "entertainment"
+        },
+        "educational": {
+            "keywords": ["explained", "education", "science", "math", "physics", "lecture", "ted talk"],
+            "weight": 1.5,
+            "activity": "educational"
+        },
+        "tech_review": {
+            "keywords": ["review", "unboxing", "hands on", "first look", "comparison", "benchmark"],
+            "weight": 1.0,
+            "activity": "neutral"
+        },
+        "fitness": {
+            "keywords": ["workout", "exercise", "fitness", "yoga", "hiit", "training"],
+            "weight": 1.2,
+            "activity": "productive"
+        }
+    },
+    
+    "article_types": {
+        "technical": {
+            "keywords": ["documentation", "api", "reference", "tutorial", "guide", "how to", "implementation"],
+            "activity": "productive"
+        },
+        "news": {
+            "keywords": ["breaking", "report", "update", "announcement", "press release"],
+            "activity": "news"
+        },
+        "blog": {
+            "keywords": ["opinion", "thoughts", "experience", "journey", "story"],
+            "activity": "neutral"
+        },
+        "research": {
+            "keywords": ["study", "research", "analysis", "findings", "paper", "journal"],
+            "activity": "educational"
+        },
+        "entertainment": {
+            "keywords": ["celebrity", "gossip", "entertainment", "movie", "tv show"],
+            "activity": "entertainment"
+        }
+    },
+    
+    "code_languages": {
+        "python": {
+            "extensions": [".py", ".pyw", ".pyx"],
+            "keywords": ["import", "def", "class", "python", "pip", "django", "flask", "pandas", "numpy"]
+        },
+        "javascript": {
+            "extensions": [".js", ".jsx", ".mjs"],
+            "keywords": ["function", "const", "let", "var", "node", "npm", "react", "vue", "angular"]
+        },
+        "typescript": {
+            "extensions": [".ts", ".tsx"],
+            "keywords": ["interface", "type", "typescript", "angular", "nest"]
+        },
+        "java": {
+            "extensions": [".java", ".jar"],
+            "keywords": ["public class", "void main", "java", "spring", "maven", "gradle"]
+        },
+        "cpp": {
+            "extensions": [".cpp", ".cc", ".cxx", ".hpp", ".h"],
+            "keywords": ["#include", "std::", "cout", "cin", "template"]
+        },
+        "go": {
+            "extensions": [".go"],
+            "keywords": ["package main", "func", "golang", "go mod"]
+        },
+        "rust": {
+            "extensions": [".rs"],
+            "keywords": ["fn main", "impl", "cargo", "rust"]
+        },
+        "ruby": {
+            "extensions": [".rb", ".erb"],
+            "keywords": ["def", "end", "rails", "gem"]
+        },
+        "php": {
+            "extensions": [".php"],
+            "keywords": ["<?php", "function", "laravel", "composer"]
+        },
+        "csharp": {
+            "extensions": [".cs"],
+            "keywords": ["namespace", "using", "dotnet", "aspnet"]
+        },
+        "swift": {
+            "extensions": [".swift"],
+            "keywords": ["func", "var", "let", "swift", "xcode"]
+        },
+        "kotlin": {
+            "extensions": [".kt", ".kts"],
+            "keywords": ["fun", "val", "var", "kotlin", "android"]
+        }
+    },
+    
+    "document_types": {
+        "technical_doc": {
+            "keywords": ["documentation", "specification", "technical", "api", "reference"],
+            "activity": "productive"
+        },
+        "research_paper": {
+            "keywords": ["abstract", "introduction", "methodology", "conclusion", "references", "doi"],
+            "activity": "educational"
+        },
+        "ebook": {
+            "keywords": ["chapter", "preface", "epilogue", "novel"],
+            "activity": "entertainment"
+        },
+        "manual": {
+            "keywords": ["manual", "instructions", "guide", "setup", "installation"],
+            "activity": "productive"
+        },
+        "presentation": {
+            "keywords": ["slide", "presentation", "keynote"],
+            "activity": "productive"
+        }
+    }
+}
